@@ -33,6 +33,6 @@ class DP_Multi():
         return t
 
     def measure_windspeed(self, channel):
-        p = self.measure_pressure()
+        p = self.measure_pressure(channel)
         return math.sqrt(2 * (abs(p) / AIR_DENSITY))
         

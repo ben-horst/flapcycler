@@ -31,7 +31,7 @@ class DPSensor_4525(I2CInterface):
             self._connected = True
         except:
             self._connected = False
-            print("cannot communicate to 4525 module")
+            #print("cannot communicate to 4525 module")
 
     @property
     def pressure_pa(self): 
@@ -43,7 +43,7 @@ class DPSensor_4525(I2CInterface):
             self._pressure_p = raw_to_pressure_pa(dp_raw)
         except:
             self._connected = False
-            print("cannot communicate to 4525 module")
+            #print("cannot communicate to 4525 module")
             self._pressure_p = 0
         return self._pressure_p
 
@@ -57,7 +57,7 @@ class DPSensor_4525(I2CInterface):
             self._temperature_c = raw_to_temperature_c(temp_raw)
         except:
             self._connected = False
-            print("cannot communicate to 4525 module")
+            #print("cannot communicate to 4525 module")
             self._temperature_c = 0
         return  self._temperature_c
 
